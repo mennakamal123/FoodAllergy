@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onze-egypt-Verify-email</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0%;
+        }
+        .main{
+            background-color:#d8d8d8;
+            height: 100%;
+            width: auto;
+            padding: 30px;
+            margin: 0;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(1fr)
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 10px;
+        }
+        .logo img{
+            width: 50px;
+        }
+        .parent{
+            display: grid;
+            background-color: rgb(29, 121, 182);
+            align-items: center;
+            padding:0;
+            width: 90%;
+            margin: auto;
+            border-radius: 10px;
+            padding-bottom: 20px;
+            box-shadow: 0px 5px rgb(0, 19, 105);
+        }
+        .top{
+            background-color: #162540;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .top img{
+            display: flex;
+            width: 100px;
+            padding: 10px;
+        }
+        .content{
+            padding: 10px;
+            padding-top: 20px;
+            display: grid;
+        }
+        .verify{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .welcome{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            justify-content: center;
+        }
+        .pls{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 2px 10px;
+            justify-content: center;
+        }
+        .button{
+            display: flex;
+            padding-top: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .text{
+            display: flex;
+            color: rgb(83, 83, 83);
+            padding-top: 10px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .button a button{
+            border-radius: 10px;
+            font-size: 20px;
+            width: 200px;
+            height: 40px;
+            background: linear-gradient(rgb(8, 108, 172), rgb(255, 206, 27));
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .finish{
+            display: flex;
+            color: rgb(83, 83, 83);
+            padding-top: 10px;
+            align-items: center;
+            text-align: center;
+            justify-content: space-evenly;
+        }
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+          }
+        .fa {
+        padding: 20px;
+        font-size: 30px;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+        }
+        .fa:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <div class="parent">
+            <div class="top">
+                <img src="{%static 'logo/omar.png' %}" alt="image">
+                <h1 style="color: white;">Verify and add blue trick to your account</h1>
+            </div>
+            <div class="content">
+                <div class="verify">
+                    <h1>Verify your email </h1>
+                </div>
+                <div class="welcome">
+                    <h4>welcome <span style="font-weight: bolder; font-size: 23px;">{{name}}</span></h4>
+                </div>
+                <div class="pls">
+                    <h3>Please click the button below to confirm your email address and activate your account</h3> 
+                </div>
+                <div class="button">
+                    <a href="{{url}}" ><button>Confirm Email</button></a>
+                </div>
+                <div class="text">
+                    <h5>if you received this in error, simply ignore this email and don't click the bottom</h5>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
